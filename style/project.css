@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+#project {
+  /* min-height: 100vh; */
+  width: 100%;
+  padding: 5% 0 2% 0;
+
+  font-family: Inter;
+  font-weight: 300;
+  color: rgba(255,255,255, 0.8);
+
+}
+#project .project__container {
+  width: 60%;
+  margin: auto;
+}
+
+#project .project__container .project__title h2 {
+  font-family:Space Grotesk;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#project .project__container .project__cards {
+  width: 100%;
+  padding: 5% 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8%;
+  
+  position: relative;
+}
+
+.project__cards p {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#project .project__container .card {
+  z-index: 9990;
+  width: 350px;
+  height: 200px;
+
+  margin: 0 0 8% 0;
+
+  border-radius: 3px;
+  border: 1px solid rgba(217,217,217, 0.8);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  position: static;
+  overflow: hidden;
+
+  transition: all .2s ease-in-out;
+}
+
+#project .project__container .card .project__card-links a {
+  opacity: 0.7;
+}
+
+#project .project__container .project__cards .gradient-card {
+  position: absolute;
+
+  z-index: -2;
+  --size-width: 350px;
+  --size-height: 200px;
+
+  width: var(--size-width);
+  height: var(--size-height);
+  filter: blur(calc(var(--size-width) / 15));
+  background-image: linear-gradient(0.30turn ,#5B45A9,2%,#9f69dcb2, #005B8C, #02ccc9);
+  border-radius: 2%;
+
+  opacity: 0.7;
+  overflow: hidden;
+
+}
+
+/* HOVER  */
+
+#project .project__container .card:hover {
+  transform: scale(1.1);
+}
+
+#project .project__container .card .project__card-links a:hover {
+  opacity: 1;
+}
+
+/* RESPONSIVE SIDE  */
+
+@media (max-width: 35em) {
+
+  #project .project__container {
+    width: 80%;
+  }
+
+  #project .project__container .project__cards .gradient-card {
+    --size-width: 300px;
+    --size-height: 200px;
+  }
+
+}
+
+@media (min-width: 35em) and (max-width: 65em) {
+ 
+  #project .project__container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 125em) {
+  #project .project__container {
+    width: 40%;
+  }
+}

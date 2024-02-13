@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+#hero__navbar {
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1em;
+  position: fixed;
+  
+  width: 100%;
+  margin: 10px auto;
+  z-index: 100002;
+  
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.navbar {    
+  width: fit-content;
+  height: 46px;
+
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  
+  background: hsla(0, 0%, 100%, 0.1);
+  border: none;
+  border-radius: 12px;
+  
+}  
+
+
+.nav__links {
+  list-style: none;
+  
+  width: 100%;
+  
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 300;
+  
+  /* backdrop-filter: blur(1rem); */
+}
+
+
+
+.nav__links a {
+  position: relative;
+  
+  text-decoration: none;
+  color: #fff;
+  
+  font-weight: 300;
+  cursor: pointer;
+  
+  opacity: 0.7;
+}
+
+#links {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.nav__links #links a {
+  padding: 11px;
+  border-radius: 4px;
+}
+
+/* contact buttons */
+
+#contact {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 10px 20px;
+}
+
+
+
+/* HOVER  */
+
+#hero__navbar .navbar .nav__links #links a:hover {
+  opacity: 1;
+  background: #d9d9d92a;
+  
+}
+
+
+#hero__navbar .navbar .nav__links #contact a:hover {
+  opacity: 1;
+}
+
+
+
+/* NAVBAR RESPONSIVE  */
+
+@media (min-width: 55em) {
+  .navbar {
+    min-width: 800px;
+  }
+}
+
+
+@media (max-width: 35em) {
+
+  /* The links (links and contacts) are controled with it. */
+   .nav__links {
+    position: fixed;
+    z-index: 10000;
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+
+    background: hsla(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(1rem);
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+  
+  /* for the visibility of the navbar when its true */
+  .nav__links[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    
+    z-index: 10001;
+
+    background-color: transparent;
+    background-image : url(../img/menu-4-48.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.5rem;
+    border: 0;
+    aspect-ratio: 1;
+    
+  }
+
+  .mobile-nav-toggle[aria-expanded = 'true'] {
+    background-image: url(../img/x-mark-48.png);
+  }
+
+
+  /* the link opacity when active  */
+  .nav__links a {
+    opacity: 1;
+    background: none;
+  }
+
+  /* I couldnt control my code perectly so I had to manually display none the navbar on top  */
+  .navbar {
+     background: none; /* because I couldnt get the navbar itself, I had to remove it. */
+  }
+
+  #links, #contact {
+    flex-direction: column;
+    align-items: start;
+
+    padding-left: 2em;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.2);
+    padding: 0 0 15px 0;
+  }
+
+
+}

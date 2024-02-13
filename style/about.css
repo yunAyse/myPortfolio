@@ -1,0 +1,208 @@
+#about {
+  /* min-height: 100vh; */
+  width: 100%;
+  padding: 5% 0 2% 0;
+
+  font-family: Inter;
+  font-weight: 300;
+  color: rgba(255,255,255, 0.8);
+
+}
+
+#about .about__container {
+  width: 60%;
+  margin: auto;
+}
+
+#about .about__container h2 {
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-size: 30px;
+
+}
+
+#about .about__container .about__description .about__text {
+  font-size: 14px;
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#about .about__container .about__description {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+#about .about__container .about__description a {
+  text-decoration: none;
+  color: rgba(255,255,255, 0.8);
+
+  font-family: Space Grotesk;
+
+}
+
+.about__description button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 2% 6% 2% 6%;
+  margin: 1%;
+
+  background: #83fffd80;
+  width: max-content;
+
+  cursor: pointer;
+}
+
+#about .about__description .gradient-profil {
+  position: absolute;
+  z-index: -2;
+  --size-width: 300px;
+  --size-height: 280px;
+
+  width: var(--size-width);
+  height: var(--size-height);
+  filter: blur(calc(var(--size-width) / 5));
+  background-image: linear-gradient(0.20turn ,#5B45A9,#9F69DC, #005B8C, #02ccc9);
+  border-radius: 3%;
+
+  /* opacity: 1.6; */
+  overflow: hidden;
+
+  top: -45%;
+  right: -15%;
+
+}
+
+#about .about__profil {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#about .about__description .about__profil-image {
+  object-fit: contain;
+  width: 280px;
+  height: 280px;
+  border-radius: 140px;
+}
+
+
+#about .about__skills-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+
+}
+
+#about .about__skills .bubble {
+  max-width: fit-content;
+  padding: 1%;
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  
+  border-radius: 2px;
+  border: 1px solid rgba(217,217,217, 0.6);
+  
+  background-image: linear-gradient(to top left ,#5b45a9c5,#9f69dc70, #02ccc9b6);
+
+}
+
+
+/* HOVER  */
+
+.about__description button:hover {
+  letter-spacing: 2px;
+  transition: 0.01s;
+}
+
+/* RESPONSIVE  */
+
+@media (max-width: 35em) {
+
+  #about {
+    padding-top: 15%;
+  }
+
+  #about .about__container {
+    width: 90%;
+  }
+
+  #about .about__container h2{
+    font-size: large;
+  }
+
+  #about .about__container .about__description {
+    flex-direction: column;
+    justify-content:center;
+
+    gap: 50px;
+  }
+
+  .about__description button {
+    padding: 2% 6%;
+    margin-top: 5%;
+    
+    font-size: 12px;
+    
+  }
+
+  
+  #about .about__container .about__description .about__text {
+    width: 100%;
+    font-size: 10px;
+  }
+  
+  #about .about__description .about__profil-image {
+    object-fit: contain;
+    width: 170px;
+    height: 170px;
+    border-radius: 85px;
+    
+  }
+  
+  #about .about__description .gradient-profil {
+    --size-width: 200px;
+    --size-height: 190px;
+    
+    right: 15%;
+  }
+  
+  #about .about__skills .bubble{
+    font-size: 8px;
+  }
+}
+
+
+@media (min-width: 35em) and (max-width: 55em) {
+  #about .about__container .about__description .about__text {
+    font-size: 12px;
+  }
+
+  #about .about__container {
+    width: 80%;
+  }
+
+  #about .about__container h2{
+    font-size: large;
+  }
+
+  #about .about__description .about__profil-image {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+
+  }
+
+  #about .about__skills .bubble{
+    font-size: 8px;
+  }
+  
+}
+

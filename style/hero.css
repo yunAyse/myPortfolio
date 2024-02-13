@@ -1,0 +1,173 @@
+#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  font-family: Space Grotesk;
+  padding: 3%;
+}
+
+#hero .hero__container {
+  position: absolute;
+  top: 20%;
+  bottom: 50%;
+  display: flex;
+
+  text-align: center;
+  width: 100%;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero__container .hero__title h1 {
+  font-size: 42px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.hero__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title-world {
+  color: #928ead;
+  opacity: 0.6;
+  /* text-decoration: line-through; */
+}
+
+
+@keyframes strike-on {
+  0% {width: 0%;}
+  100% {width: 100%;}
+}
+  .strike {
+    position: relative;
+  }
+
+  .strike::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #928ead;
+    animation-name: strike-on;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes strike-reverse {
+    0% {width: 100%;}
+    100% {width: 0%;}
+  }
+  
+  .strike:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #928ead;
+    animation-name: strike-reverse;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+.hero__title-world:hover {
+  background: -webkit-linear-gradient(0.40turn ,#9F69DC, #02ccc9);
+  -webkit-text-fill-color: transparent;
+  background-clip:content-box;
+  -webkit-background-clip: text;
+  opacity: 1;
+
+  text-shadow: 3px 3px 16px #9F69DC,
+    -2px 1px 40px #9F69DC;
+}
+  
+
+.hero__container .hero__subtitle {
+  width: 800px;
+
+  font-size: 16px;
+  color: rgba(255,255,255, 0.8);
+}
+
+.hero__container .hero__subtitle p {
+  margin-top: 20px;
+}
+
+.hero__subtitle .hero__subtitle-developer {
+ color: #83FFFD;
+}
+
+.hero__text {
+  color: rgba(255,255,255, 0.8);
+  font-size: 14px;
+}
+
+.hero__text a {
+  text-decoration: none;
+}
+
+.lets-go {
+  color: #83FFFD ;
+}
+
+/* About Me  */
+
+/* RESPONSIVE */
+
+@media (min-width: 35em) and (max-width: 55em) {
+  #hero .hero__container {
+    width: 70%;
+
+    top: 60%;
+  }
+
+  .hero__container .hero__subtitle {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 35em) {
+  #hero .hero__container {
+    /* width: 60%; */
+
+    top: 60%;
+  }
+
+  #hero .hero__title h1 {
+    font-size: 28px;
+  }
+
+  #hero .hero__subtitle {
+    width: 99%;
+    font-size: 12px;
+
+    justify-content: center;
+  }
+
+  #hero .hero__text {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 55em) {
+  #hero .hero__container {
+    top: 50%
+  }
+
+  
+}
