@@ -78,6 +78,7 @@
 
   /* opacity: 1.6; */
   overflow: hidden;
+  will-change: transform; 
 
   top: -45%;
   right: -15%;
