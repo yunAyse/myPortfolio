@@ -41,65 +41,76 @@
 
 
 @keyframes strike-on {
-  0% {width: 0%;}
-  100% {width: 100%;}
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
-  .strike {
-    position: relative;
+
+.strike {
+  position: relative;
+}
+
+.strike::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #928ead;
+  animation-name: strike-on;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strike-reverse {
+  0% {
+    width: 100%;
   }
 
-  .strike::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #928ead;
-    animation-name: strike-on;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  100% {
+    width: 0%;
   }
+}
 
-  @keyframes strike-reverse {
-    0% {width: 100%;}
-    100% {width: 0%;}
-  }
-  
-  .strike:hover::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #928ead;
-    animation-name: strike-reverse;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
+.strike:hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #928ead;
+  animation-name: strike-reverse;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 .hero__title-world:hover {
-  background: -webkit-linear-gradient(0.40turn ,#9F69DC, #02ccc9);
+  background: -webkit-linear-gradient(0.40turn, #9F69DC, #02ccc9);
   -webkit-text-fill-color: transparent;
-  background-clip:content-box;
+  background-clip: content-box;
   -webkit-background-clip: text;
   opacity: 1;
 
   text-shadow: 3px 3px 16px #9F69DC,
     -2px 1px 40px #9F69DC;
 }
-  
+
 
 .hero__container .hero__subtitle {
   width: 800px;
 
-  font-size: 16px;
-  color: rgba(255,255,255, 0.8);
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .hero__container .hero__subtitle p {
@@ -107,12 +118,12 @@
 }
 
 .hero__subtitle .hero__subtitle-developer {
- color: #83FFFD;
+  color: #83FFFD;
 }
 
 .hero__text {
-  color: rgba(255,255,255, 0.8);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
 }
 
 .hero__text a {
@@ -120,7 +131,7 @@
 }
 
 .lets-go {
-  color: #83FFFD ;
+  color: #83FFFD;
 }
 
 /* About Me  */
@@ -169,5 +180,5 @@
     top: 50%
   }
 
-  
+
 }

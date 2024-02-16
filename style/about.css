@@ -22,7 +22,7 @@
 }
 
 #about .about__container .about__description .about__text {
-  font-size: 14px;
+  font-size: 1em;
   width: 60%;
 
   display: flex;
@@ -163,7 +163,7 @@
   
   #about .about__container .about__description .about__text {
     width: 100%;
-    font-size: 10px;
+    font-size: 0.8em;
   }
   
   #about .about__description .about__profil-image {
